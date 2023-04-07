@@ -1,0 +1,7 @@
+celery -A djangorediscelery worker -l INFO -P solo -E
+
+
+celery -A djangorediscelery beat -l INFO
+
+
+docker run -it --rm -p 6379:6379 "redis"
